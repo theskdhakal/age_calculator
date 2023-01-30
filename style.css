@@ -28,6 +28,7 @@ body {
   backdrop-filter: blur(45px);
   border-radius: 20px;
   padding: 20px;
+  z-index: 999;
 }
 
 .box h4 {
@@ -113,6 +114,72 @@ p.value {
   transition: 500ms ease;
 }
 
+.reset-container {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+#resetBtn {
+  background: red;
+  color: white;
+  width: 100px;
+  height: 38px;
+  border: none;
+  border-radius: 4px;
+  margin: 10px auto;
+}
+
+.fa-dove {
+  color: rgb(146, 101, 45);
+  font-size: 70px;
+}
+
+@keyframes fly {
+  0% {
+    position: absolute;
+    left: 7%;
+    bottom: 7%;
+  }
+
+  20% {
+    position: absolute;
+    left: 20%;
+    bottom: 20%;
+  }
+
+  40% {
+    position: absolute;
+    left: 40%;
+    bottom: 40%;
+  }
+
+  60% {
+    position: absolute;
+    left: 60%;
+    bottom: 60%;
+  }
+
+  80% {
+    position: absolute;
+    left: 80%;
+    bottom: 80%;
+  }
+
+  100% {
+    position: absolute;
+    left: 90%;
+    bottom: 90%;
+  }
+}
+
+.bouncer {
+  animation: fly 3s 2s ease-in-out forwards;
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+}
+
 @media (max-width: 768px) {
   body {
     display: block;
@@ -160,7 +227,12 @@ p.value {
   }
 
   .age-calc .age-box .value {
-    padding: 30px 5px;
+    padding: 15px 5px;
     font-size: 0.9rem;
+  }
+
+  .age-calc .age-box {
+    width: 100%;
+    margin: 15px 0;
   }
 }
