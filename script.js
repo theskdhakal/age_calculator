@@ -73,7 +73,7 @@ datePicker.addEventListener("change", function () {
     birthday = new Date(
       currentYear + 1,
       selectedDate.getMonth(),
-      selectedDategetdate()
+      selectedDate.getDate()
     );
   }
 
